@@ -55,8 +55,8 @@ int InsertNode(Node **HeadNode, char *TargetData, char *NewData) {
 		while (Current != NULL && strncmp(Current->data, TargetData, strlen(TargetData)) != 0) {
 			Current = Current->NextNode;
 		}
-		if (Current == NULL) return 1;				// If there is no matched node for the target data.
-		if (Current == *HeadNode) {					// If head of the list is matched the target data. 
+		if (Current == NULL) return 1;		// If there is no matched node for the target data.
+		if (Current == *HeadNode) {       // If head of the list is matched the target data. 
 			Node *NewNode = CreateNode(NewData);
 			NewNode->NextNode = Current;
 			*HeadNode = NewNode;

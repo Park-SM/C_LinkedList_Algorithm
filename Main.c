@@ -11,7 +11,8 @@ int main() {
 		PrintList(List);
 
 		memset(buf, 0, MAXBUF);
-		printf("\n>>> Input your data: ");
+		printf("\n>>> Capacity: %d\n", CountingList(List));
+		printf(">>> Input your data: ");
 		fgets(buf, MAXBUF, stdin);
 
 		if (strncmp(buf, "#exit", strlen("#exit")) == 0) break;
