@@ -94,15 +94,12 @@ int DeleteNode(Node **HeadNode, char *TargetData) {
 	return 2;		// If the list is empty.
 }
 
-// If return value is -1, the list is empty.
+// If return value is 0, the list is empty.
 int CountingList(Node *Current) {
-	if (Current != NULL) {
-		int count = 0;
+		int Count = 0;
 		while (Current != NULL) {
-			count++;
+			Count++;
 			Current = Current->NextNode;
 		}
-		return count;
-	}
-	return -1;
+		return Count;
 }
